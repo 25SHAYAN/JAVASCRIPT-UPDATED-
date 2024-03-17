@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    //arrays
+
+    //the items inside [ called elements it can be string,numbers and elements]
+    const myarr =  [1,2,3,4,5];
+    //doesnt mean same type it can be like this also
+    const myarr1 =  [0,1,2,3,4,5,true,"shayan"];
+
+    const myHeroes = ["shaktiman","naagraj"];
+    const myarr3 = new Array(1,2,3,4,5);
+    console.log(myarr3[0]);
+
+    //array methods
+
+    //to add new element
+    myarr.push(6);
+    myarr.push(7);
+    console.log(myarr);
+
+    //removes last element no need to mention element
+    myarr.pop();
+    console.log(myarr);
+
+    //unshift adds element in 1st position of array
+    myarr.unshift(9);
+    console.log(myarr);
+
+    //like pop we have shift removes unshift value
+    myarr.shift();
+    console.log(myarr);
+
+    //to check whether value present or not we use includes return boolean type
+    console.log(myarr.includes(9));
+    console.log(myarr)
+
+    //to check index value
+    console.log(myarr.indexOf(9)); //returns -1 if not exist value
+    console.log(myarr)
+
+    //if we check for existing element
+    console.log(myarr.includes(3));
+    console.log(myarr)
+
+    
+    //join - adds all element into string
+    const newarr = myarr.join()
+    console.log(myarr);
+    console.log(newarr)//returns same value but converts to string
+
+    //slice and splice
+
+    console.log("A",myarr);
+
+    const myn1  = myarr.slice(1,3)//start from index 1 and not include index 3
+    console.log(myn1)
+
+    console.log("B", myarr)
+
+    const myn2 = myarr.splice(1,3)//it includes
+    console.log("c", myarr)//splice manipulates original array interviw q
+    console.log(myn2)
+
+  </script>  
+</body>
+</html>
