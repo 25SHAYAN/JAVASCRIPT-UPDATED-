@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const score = 400
+    console.log(score);
+
+    //if we want the number data type must we use this
+    const balance = new Number(100)
+    console.log(balance);
+    console.log(typeof balance)
+
+    console.log(balance.toString().length);
+
+    console.log(balance.toFixed(2));//to fix precision value
+
+    //precesiion
+    const otherNumber = 123.8966
+    //returns a string
+    console.log(otherNumber.toPrecision(4))//takes 123 and there is .8 next so converts to 124
+
+    const hundreds = 1000000
+    console.log(hundreds.toLocaleString())//usally in US standards
+    console.log(hundreds.toLocaleString('en-IN'))//to INDIAN STANDARDS
+   </script> 
+
+   <script>
+    //---------------------------------  Maths ----------------------------------------
+
+    //IT IS OBJECT AND HAVE MANY PROPERTIES
+    console.log(Math);
+    //
+
+   //Math.abs 
+    console.log(Math.abs(-5555)) //converts negative value into positive
+    console.log(Math.abs(4))//positive will be in positive state only
+
+    //round off the value
+    console.log(Math.round(4.6))
+
+    console.log(Math.ceil(4.1)) //if the value after . is slightly heigher it will take next heighest value
+
+    console.log(Math.floor(4.9));//takes lowest value 
+
+    //to find max and min values
+    console.log(Math.min(2,5,7,8));
+    console.log(Math.max(2,5,7,8));
+
+    //math.random values are always come b/w 0 and 1
+    console.log(Math.random());
+
+    //shifts left and we add 1 to get out of doubt
+    console.log((Math.random()*10)+ 1); //to get clarifyication we add +1
+
+    
+    console.log(Math.floor(Math.random()*10)+ 1);
+
+    const min = 10
+    const max = 20
+    console.log(Math.floor(Math.random()*(max - min +1))+ min)
+   </script>
+</body>
+</html>

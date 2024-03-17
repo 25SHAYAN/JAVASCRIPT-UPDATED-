@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  //Data Types are Categorized into 2 Types
+//the datas are categorized based on how they store in memory and how we acess it
+
+//1. Primitive 
+//primitive data are call by value type when we call it it will pass copy not original
+
+//7types
+
+//to make values unique we use symbol
+//String,Number,Boolean,Null,undefined,Symbol,BigInt
+
+//2. Non-Primitive or reference type
+//Arrays
+//Objects
+//Functions
+
+//JS is a Dynamically Typed Language
+//eg:- const score = true or 3 , we didnt speciy define variable types
+
+//in js there is no diff in float and decimal its a number
+const score = 100
+const scorevalue = 100.3
+
+//boolean
+const isloggedin = false
+
+//null
+const outsidetemp = null //doesnt mean 0 its nothing inside  ,empty(null means not 0)
+
+//undefined
+let useremail;
+//or (both same)
+let useremail1 = undefined
+
+//symbol
+const id = Symbol('123')
+const anotherid = Symbol('123')
+
+console.log(id === anotherid)//returns false  value is same but returned values are notsame
+
+//bigint we write n after number to declare number as bigint
+const bignumber = 34546745648n
+console.log(typeof(bignumber));
+    </script>
+
+    <script>
+        //REFERENCE OR NON-PRIMITIVE TYPES
+        //ARRAY,OBJECTS,FUNCTIONS
+
+        //arrays  declare in []
+        const heros = ["Shaktiman", " naagraj" , "dogo"];
+
+        //ojects are declared in {} and in key value pair
+        let myobj = {
+            name: "shayan",
+            age: 22,
+        }
+
+        //functions
+        //basic structre
+       const myfun =  function(){
+        console.log("hello");
+       }
+
+       console.log(typeof(myfun));//function object
+    </script>
+    <script>
+        //+++++++++++++++++++=MEMORY+++++++++++++++++++
+        //MEMORY OF 2 TYPES STACK AND HEAP
+
+        //WHEN WE USE PRIMITIVE TYPE WE USE STACK MEMORY(WE WILL GET COPY)
+        //WHEN WE USE NON-PRIMITIVE WE USE HEAP MEMORY(WE WILL GET ORIGINAL)
+
+        let myYoutubename = "shayandotcom" //stores in stack
+        let anothername = myYoutubename
+        anothername = "chaiaurcode" //copy will chage
+        console.log(myYoutubename);//original not changes
+        console.log(anothername);
+
+        //we declare object
+        let userOne = {
+            email:"user@gmail.com",
+            upi:"user@bl"
+        }
+        //changes original value of userone
+        let userTwo = userOne
+
+        userTwo.email = "shayan@google.com"
+        console.log(userOne.email)
+        console.log(userTwo.email)
+    </script>
+</body>
+</html>

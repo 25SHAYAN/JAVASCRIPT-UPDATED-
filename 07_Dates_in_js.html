@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates</title>
+</head>
+<body>
+    <script>
+        //Dates
+        let myDate =  new Date()
+        console.log(myDate.toString());
+        console.log(myDate.toJSON())
+        console.log(myDate.toDateString())
+        console.log(myDate.toLocaleString())
+        console.log(typeof myDate);//imp it is object
+
+        let myCreatedDate = new Date(2023,8,23)
+        console.log(myCreatedDate.toDateString())
+
+        //if we want time
+        let myCreatedDate1 = new Date(2023,8,23,5,3)
+        console.log(myCreatedDate1.toLocaleString());
+        //another format
+        let myCreatedDate2 = new Date("01-14-2023")
+        console.log(myCreatedDate2.toLocaleString());
+
+        //timestamps
+         let myTimeStamp = Date.now()
+         console.log(myTimeStamp); //returns millisec value from 1st jan as above
+         console.log(myCreatedDate.getTime())
+         
+         //Date.now returns in milliseconds
+         console.log(Math.floor(Date.now()/1000))
+
+         let newDate = new Date()
+         console.log(newDate)
+         console.log(newDate.getMonth()+1)//starts from 0 so add +1
+         console.log(newDate.getDay())//satarday
+
+         newDate.toLocaleString('default',{
+            weekday: "long"
+            
+         })
+    </script>
+</body>
+</html>

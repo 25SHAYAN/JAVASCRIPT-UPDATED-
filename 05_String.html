@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = "shayan" //string type
+        const repoCount = 50 //number type
+
+        // this is outdated format below
+    //    console.log(name + repoCount + " value")
+
+    //we use backtics `` and we dod STRINGINTERPOLATION (WE do placeholders)
+    console.log(`hello my name is ${name} and my repo is ${repoCount}`);
+
+    //declaring string in object type 
+    const gameName = new String('hitesh-hc-com')
+    console.log(gameName[0]);//to get elements of string
+
+    console.log(gameName.__proto__); //to access prototype
+
+    console.log(gameName.length)
+    
+    console.log(gameName.toUpperCase())//doesnt changes original value becase string is static type
+
+    console.log(gameName.charAt(2)); //to know character at position
+
+    //to know position of given character
+    console.log(gameName.indexOf('t'));
+
+ const newString = gameName.substring(0,4);//takes 0,1,2,3 elements the last value we gave 4 is not included
+ console.log(newString)
+
+
+ const anotherString = gameName.slice(0,4)
+ console.log(anotherString);
+  //we can use negative values in slice
+ const anotherString1 = gameName.slice(-8,4)
+ console.log(anotherString1)
+
+ //trim is used to remove extra spaces
+ const newStringOne = "    hites   "
+ console.log(newStringOne)
+ console.log(newStringOne.trim())
+
+ //replacing url
+ const url = "https://hitesh.com/hitesh%20shayan"
+ console.log(url.replace('%20','-')) //give what to change and what to replaced with
+
+ //to check whether the keyword is present or not
+ console.log(url.includes('hitesh'))
+ console.log(url.includes('naga')) //not present so false
+
+ //we can split string based on - or space ' ' return array
+ console.log(gameName.split('-'))
+    </script>
+</body>
+</html>
