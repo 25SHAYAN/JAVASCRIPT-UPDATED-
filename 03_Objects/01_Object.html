@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //2 types to declare objects
+    //1. literal type
+    //2. constructor type
+
+    //singleton - when we do in literal type it wont become singleton , if we do in constroctor it becomes
+
+    //object literals
+    const JsUser = {
+      name: "shayan",
+      age:18,
+      location:"dvg",
+      email:"shayan@2001",
+      islogin :false,
+      islogindays:["monday","satarday"],
+      "fullname": "Nagashayan K" //if we have object in "" dot doesnt work below
+    }
+    //to acess objects
+   console.log(JsUser.age)
+   //another method
+   console.log(JsUser["age"])//the age,name ..in object treated as string so give ""
+   console.log(JsUser["fullname"])//we should use this method to acees object if we have "" during object creation
+  </script>
+
+  <script>
+    //symbol data type
+
+    const mysym = Symbol("key1")
+
+    //if we want to add key to symbol **imp
+    const JsUser1 = {
+      name: "shayan",
+      age:18,
+     // mysym: "mykey1", if we do in this way it returns in string format normal type
+     [mysym]: "mykey1",
+      location:"dvg",
+      email:"shayan@2001",
+      islogin :false,
+      islogindays:["monday","satarday"],
+      "fullname": "Nagashayan K" 
+    }
+
+    //console.log(JsUser1.mysym)//we get output but when we see type of mysum it shows string which is wrong way of declation
+   // console.log(typeof JsUser1.mysym)//so use [ ] while object declaration
+
+   //we should print in this format only
+   console.log(JsUser1[mysym])
+
+   //to change object values
+   JsUser1.email = "nagashayana@gmail.com"
+   console.log(JsUser1.email)
+    
+   //to avoid changes in object use freeze
+   Object.freeze(JsUser1);
+   JsUser1.email = "nagashayana@microsoft.com"
+   console.log(JsUser1) //email doent chane
+  </script>
+
+  <script>
+    //functions
+    const JsUser2 = {
+      name: "shayan",
+      age:18,
+      location:"dvg",
+      email:"shayan@2001",
+      islogin :false,
+      islogindays:["monday","satarday"],
+      "fullname": "Nagashayan K" 
+    }
+
+    JsUser2.greetings = function(){
+      console.log("hello js user")
+    }
+
+    //to take object reference use ``
+    //this is used to get reference of all properties of object
+    JsUser2.greetingtwo = function(){
+      console.log(`hello js user,${this.name}`)
+    }
+    console.log(JsUser2.greetings)//function not executed only returns reference
+    console.log(JsUser2.greetings())
+    console.log(JsUser2.greetingtwo())
+  </script>
+</body>
+</html>

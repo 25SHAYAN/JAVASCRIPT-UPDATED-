@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <script>
+  //creating objects by constructor
+ 
+ // const tinderuser = new Object() //its a singleton object
+ //or
+ //non singleton
+ const tinderuser = {} 
+ //we give values
+ tinderuser.id = "123abc"
+ tinderuser.name = "sammy"
+ tinderuser.isloggedin = false
+ //console.log(tinderuser)
+
+ //declaring object in object
+ const regularuser = {
+  email: "shayan@gmail.com",
+  fullname: {
+    userfullname: {
+      firstname: "naga",
+      lastname: "shayan"
+    }
+  }
+ }
+ console.log(regularuser.fullname.userfullname.firstname)
+
+//to combine objects (new objects)
+ const obj1 = {1:"a",2:"b"}
+ const obj2 = {3:"a",4:"b"}
+ const obj4 = {5:"a",6:"b"}
+
+ //const obj3 = {obj1,obj2}
+ //console.log(obj3);
+
+ //instead of above method we use assign
+ //const obj3 = Object.assign({},obj1,obj2,obj4)
+ //give {} that every thing will copy in it orelse it will copy in obj1
+
+ //best use spread
+ const obj3 = {...obj1,...obj2}
+ console.log(obj3)
+ </script> 
+
+ <script>
+  //when we get data from database we get it in array format
+  //array of objects 
+  const users = [
+    {
+      id:1,
+      email:"h@gmail.com"
+    },
+    {
+      id:1,
+      email:"h@gmail.com"
+    },
+    {
+      id:1,
+      email:"h@gmail.com"
+    },
+    {
+      id:1,
+      email:"h@gmail.com"
+    },
+  ]
+
+  users[1].email;
+
+  console.log(tinderuser);
+  //returns in array format
+  console.log(Object.keys(tinderuser))
+  console.log(Object.values(tinderuser))
+  console.log(Object.entries(tinderuser))//sepeartes each keyvalue pair into arrays
+
+  //to check is value is present or not
+  console.log(tinderuser.hasOwnProperty('islogged'));
+
+  // ----------------------------------------------
+  //Destructring of Object
+const course = {
+  coursename: "js in hindi",
+  price: "999",
+  courseInstructor: "Niraj"
+}
+
+//course.courseInstructor
+//its correct method but if we want to call more time we can use other method as below
+
+//const{courseInstructor} = course;
+// console.log(courseInstructor)
+
+//:name  used too replace name if we want
+
+const{courseInstructor:Instructor} = course;
+console.log(Instructor)
+
+//JSON STRUCTURE
+//JSON DOENT HAVE NAME
+//key must be in ""
+// {
+//   "name":"shayana",
+//   "coursename":"javascript",
+//   "price":""free"
+// }
+
+//in array format json
+[
+  {},
+  {},
+  {}
+]
+
+ </script>
+</body>
+</html>
