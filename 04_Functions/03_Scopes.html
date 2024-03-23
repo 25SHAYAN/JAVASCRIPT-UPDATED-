@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let a =10;
+    // const b = 20;
+    // var c= 30;
+
+  //  {} thease are called scopes when it comes with functions and if iflese..
+//var c =300 
+// and we declare c=30 in if cond it prints 30 in p/p so its confusing we use let most of the case
+let a = 50
+  if(true){
+  let a =10;
+  console.log("inner a value",a )
+    const b = 20;
+     var c= 30;
+  }
+  //  console.log(a); local scope
+   // console.log(b); 
+    console.log(c); //global scope
+
+    console.log(a); //upper a will print
+  </script>
+</body>
+</html>

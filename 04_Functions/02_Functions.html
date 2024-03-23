@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+  <script>
+     //rest operator in function
+    function calculatecartprize(...num1){
+          return num1
+    }
+    //we use rest or spread operator to make bundle of all values and give it we use... in parameters (returns in array)
+   console.log(calculatecartprize(200,400,500,499));
+
+
+   function calculatecartprize1(val1,val2,...num1){
+          // return val1 
+          return num1
+    }
+   console.log(calculatecartprize1(200,400,500,499));
+  </script>
+
+  <script>
+    //how to use objects in function
+    const user = {
+      username: "shayana",
+      price : 100
+    }
+    function handleobject(anyobject){
+      console.log(`the username is ${anyobject.username} and prize is ${anyobject.price}`);
+    }
+    handleobject(user)
+  </script>
+
+  <script>
+    //we can pass object directly in fun call
+    function handleobject1(anyobject1){
+      console.log(`the username is ${anyobject1.username} and prize is ${anyobject1.prize}`);
+    }
+    handleobject1({
+      username:"sam",
+      prize:300
+    })
+  </script>
+
+  <script>
+    //using arrays
+    const myarray = [200,300,400];
+    function returnsecondvalue(getarray){
+          return getarray[1]
+    }
+    console.log(returnsecondvalue(myarray))
+  </script>
+
+
+  <script>
+    //another updated way passing directly
+    function returnsecondvalue1(getarray1){
+          return getarray1[1]
+    }
+    console.log(returnsecondvalue1([100,1000,10000]));
+  </script>
+</body>
+</html>

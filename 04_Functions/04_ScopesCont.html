@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //eg younger person can take icecream from older but older person cannot take icecream from younger(old is one here and young is two)
+    //same as above eg two function can access one elements and one cannot acess two
+
+ function one(){
+  const username = "hitesh"
+
+  //child fun can acess parent variable called closure
+  function two(){
+    const website = "youtube"
+    console.log(username);
+  }
+
+  // console.log(website);
+ two();
+ }
+one();
+  </script>
+
+  <script>
+    //making errors to understand scopes
+    if(true){
+      const username = "hitesh"
+      if(username === "hitesh"){
+        const website = " youtube"
+        console.log( username + website);
+      }
+      //   console.log(website);//website is local scope so error
+    }
+   // console.log(username); //error local scope it is
+
+   //***************************Intresting*******************
+//two types of fun dec
+console.log(addone(5));
+   function addone(value){
+     return value  + 1;
+   }
+  
+
+//this method some times called expresiion
+
+//addTwo(5); 
+//throws error if we declare up in this type 
+   const addTwo = function(num){
+    return num +2
+   }
+   addTwo(5);
+  </script>
+</body>
+</html>

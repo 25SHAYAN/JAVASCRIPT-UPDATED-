@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Immediately invoked Function Expression(IIFE)
+    //IT IS USED TO GET OUT FROM POLLUTION PROBLEM FROM GLOBAL SCOPE and ALSO WANTED FUN TO EXECUTE IMMEDIATELY
+
+    function chai(){
+      console.log("DB CONNECTED");
+    }
+    chai();
+
+    //if we use IIFE 
+    //since we use function name here it is called named iife
+    (function chaii(){
+      console.log("DB CONNECTED Successfully");
+    })();
+    //use semicolon after (); to get output
+    //instead of chaii() we wrapped itin ()
+
+    //now we use arrow function
+
+    //it throws error 
+    // (()=>{
+    //   console.log("Happy day");
+    // })()
+
+    //since the above arrow fun trows error we use function to define arrow function
+
+    //this is simple iife or unnamed
+    (
+     ()=>{
+      console.log(`Happy day`);
+      } )(); //use semicoln
+
+      //we use parameters
+      (
+     (name)=>{
+      console.log(`Happy day ${name}`);
+      } )('shayan')
+  </script>
+</body>
+</html>

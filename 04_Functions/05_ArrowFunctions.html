@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //es6 introduced arrow function
+//this keyword talks about current context
+const user = {
+  //we used this to get current context here to
+  username: "hitesh",
+  price: 999,
+ welcomemsg: function(){
+    console.log(`${this.username},welcome to website`);
+    // console.log(this);
+  }
+//here
+}
+// user.welcomemsg();
+// user.username = "sam"
+// user.welcomemsg();
+console.log(this);//returns window object which is global object in browser
+  </script>
+
+  <script>
+    function chai(){
+      let username = "hitesh"
+      console.log(this.username);//returns undefiend
+    }
+    chai();//gives diff values in node and browser envi
+
+   
+  </script>
+
+  <script>
+    //arrow functions
+     const chaii = ()=> {
+      let username1 = "shayan"
+    // console.log(this);
+    console.log(this.username1)
+    }
+    chaii()
+ 
+  </script>
+  <script>
+    //arrow functions basic format
+    const addTwo = (n1,n2)=>{
+      return n1 + n2;
+    }
+    console.log(addTwo(2,3))
+ //now we create implicit arrow functions which doesnt need {return}
+
+// const addTwo1= (n1,n2)=>n1 + n2;
+
+//if we use {} we need to specify return keyword thats why we use () so we bind data
+
+const addTwo1= (n1,n2)=>(n1 + n2);
+    console.log(addTwo1(2,2))
+
+    //explicit means {return  ..} and implicit means ()
+
+    //when we use objects
+
+    //returns undefied since objects are not binded with ()
+   // const addTwo2= (n1,n2)=>{namee:"suresh"};
+
+   //correct way
+    const addTwo2= (n1,n2)=>({namee:"suresh"});
+    console.log(addTwo2(3,4))
+    
+  </script>
+</body>
+</html>
