@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //assume we told to server togive useremail 
+   // const useremail = "shayan@ai";
+    //if we give empty string then it will give else message
+   // const useremail = "";
+     //if we give empty array then it will give if message
+    const useremail = [];
+
+//this is due to truthy or falsey value
+
+    if(useremail){
+      console.log("got user email");
+    }
+    else{
+      console.log("dont have user email")
+    }
+
+
+    //falsy values:-
+    //false, 0, -0 , BigInt 0n , "" , null , undefined, NaN
+    //other than this every this is truethy values
+
+    //truthy values:-
+    //surpizing truthy values
+  //' ' or  ""
+    // "0", 'false' , "" , [] , {} , function(){}(emopty fun)
+
+ if(useremail.length === 0){
+  console.log("simply array is empty")
+ }
+
+ const emptyobj = {}
+
+ //Object.keys(emptyobj) = > returns an array in below
+ if(Object.keys(emptyobj).length === 0){
+  console.log(" Object is empty")
+ }
+ 
+ //points to remember 
+
+//  false == 0
+//  true
+
+// false == ''
+// true
+
+// 0 == ''
+// true
+
+
+ </script>
+ <script>
+  //Nullish coalescing Operator(??)
+  //everything inthese depends on null or undefined to make that case we use this
+
+  // ?? is used when we use database we didnt get direct response we get null or undefined
+  let val1 ;
+ // val1 = 5 ?? 10
+
+ // val1 = null ?? 10  //if we have value then it assigns value
+
+// val1 = undefined ?? 15  //same as nll 15 wii e assigned
+val1 = null ?? 50 ?? 15  // the  1st value after null will be assigned
+  console.log(val1)
+ </script>
+ <script>
+  //Ternary operator (?:)
+//condition ? true : false
+
+const iceTeaPrize = 100;
+iceTeaPrize <=80 ? console.log("less than 80") : console.log("more than 80")
+ </script>
+</body>
+</html>

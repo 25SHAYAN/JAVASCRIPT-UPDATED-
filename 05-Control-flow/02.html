@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //basic
+  //  switch (key) {
+  //   case value:
+      
+  //     break;
+   
+  //   default:
+  //     break;
+  //  }
+
+
+  //instead of using if again and again we use switch
+  const month = 3
+  switch (month) {
+
+    case 1:
+    console.log("jan")
+      break;
+
+      case 2:
+    console.log("feb")
+      break;
+
+      case 3:
+    console.log("march")
+     break;
+//if we didnt  use break then it will print next statemts also except default
+      case 4:
+    console.log("april")
+      break;
+
+    default:
+    console.log("default case match");
+      break;
+  }
+  </script>
+
+  <script>
+    //for string
+    const months = "mar"
+    switch (months) {
+  
+      case  " jan":
+      console.log("jan")
+        break;
+  
+        case "feb":
+      console.log("feb")
+        break;
+  
+        case "mar":
+      console.log("mar")
+       break;
+  //if we didnt  use break then it will print next statemts also except default
+        case "apr":
+      console.log("april")
+        break;
+  
+      default:
+      console.log("default case match");
+        break;
+    }
+    </script>
+</body>
+</html>
